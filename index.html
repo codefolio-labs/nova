@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVA. | Minimal Fashion 2026</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="toast">Added to Bag ✓</div>
+
+<div class="top-bar">FREE SHIPPING ON ORDERS OVER RS. 5000 • NEW DROP LIVE</div>
+
+<nav>
+<h1>NOVA.</h1>
+<div class="nav-links">
+<a href="#collection">Shop</a>
+<a href="#new">New In</a>
+<a href="#">Journal</a>
+</div>
+<button id="cartBtn">Bag (<span id="cartCount">0</span>)</button>
+</nav>
+
+<section class="hero-fashion">
+<div class="hero-left">
+<span class="eyebrow">SS/26 COLLECTION</span>
+<h1>LESS IS<br>MORE</h1>
+<p>Curated essentials, premium fabrics. Designed in Lahore, worn everywhere.</p>
+<div class="hero-btns">
+<a href="#collection" class="btn-black">Shop Collection</a>
+<a href="#insta"class="btn-line">Lookbook</a>
+</div>
+<div class="trust-row">
+<span>✓ Premium Cotton</span><span>✓ 7-Day Returns</span><span>✓ Cash on Delivery</span>
+</div>
+</div>
+<div class="hero-right">
+<div class="hero-main-card">
+<div class="hero-badge">NEW IN - BESTSELLER</div>
+<div class="hero-emoji">👗</div>
+<h4>Summer Linen Dress</h4><p>Rs. 4,200</p>
+</div>
+<div class="hero-small-card"><div>👕</div><p>Street Hoodie</p></div>
+<div class="hero-small-card2"><div>👜</div><p>Tote Bag</p></div>
+</div>
+</section>
+
+<section id="collection" class="fashion-section">
+<div class="section-head">
+<h2>Best Sellers</h2>
+<div class="filters">
+<button class="filter active" data-filter="all">All</button>
+<button class="filter" data-filter="women">Women</button>
+<button class="filter" data-filter="men">Men</button>
+<button class="filter" data-filter="acc">Accessories</button>
+</div>
+</div>
+
+<div class="fashion-grid">
+<div class="f-product" data-cat="women"><div class="f-img">👚<span class="badge">NEW</span><span class="quick" onclick="openQuick('Oversized T-Shirt',2500)">Quick Add</span></div><h4>Oversized T-Shirt</h4><p>Heavyweight Cotton - Off White</p><div class="price-row"><b>Rs. 2,500</b><button onclick="addToCart('Oversized T-Shirt',2500)">+ Add</button></div></div>
+<div class="f-product" data-cat="women"><div class="f-img">👗<span class="badge black">HOT</span><span class="quick" onclick="openQuick('Summer Dress',4200)">Quick Add</span></div><h4>Summer Linen Dress</h4><p>Breathable - Floral</p><div class="price-row"><b>Rs. 4,200</b><button onclick="addToCart('Summer Dress',4200)">+ Add</button></div></div>
+<div class="f-product" data-cat="men"><div class="f-img">👕<span class="quick" onclick="openQuick('Street Hoodie',3800)">Quick Add</span></div><h4>Street Hoodie</h4><p>Black - Heavy Fleece</p><div class="price-row"><b>Rs. 3,800</b><button onclick="addToCart('Street Hoodie',3800)">+ Add</button></div></div>
+<div class="f-product" data-cat="men"><div class="f-img">👖<span class="quick" onclick="openQuick('Baggy Jeans',5500)">Quick Add</span></div><h4>Baggy Jeans</h4><p>Light Wash - Relaxed</p><div class="price-row"><b>Rs. 5,500</b><button onclick="addToCart('Baggy Jeans',5500)">+ Add</button></div></div>
+<div class="f-product" data-cat="acc"><div class="f-img">👜<span class="quick" onclick="openQuick('Mini Tote Bag',3200)">Quick Add</span></div><h4>Mini Tote Bag</h4><p>Genuine Leather - Tan</p><div class="price-row"><b>Rs. 3,200</b><button onclick="addToCart('Tote Bag',3200)">+ Add</button></div></div>
+<div class="f-product" data-cat="acc"><div class="f-img">🧢<span class="badge">SALE</span><span class="quick" onclick="openQuick('Classic Cap',1500)">Quick Add</span></div><h4>Classic Cap</h4><p>Unisex - Washed Black</p><div class="price-row"><b>Rs. 1,500</b><button onclick="addToCart('Classic Cap',1500)">+ Add</button></div></div>
+</div>
+</section>
+
+<section id="insta" class="insta-section" style="scroll-margin-top:80px">
+<div class="insta-head"><h3>Shop Our Instagram</h3><p>@nova.wear</p></div>
+<div class="insta-grid"><div>👗</div><div>👕</div><div>👜</div><div>👖</div></div>
+</section>
+
+<section class="newsletter">
+<h2>GET 10% OFF</h2>
+<p>Join our list and get 10% off your first order + early access to drops.</p>
+<div class="news-form"><input type="email" placeholder="Your email address"><button  style="background-color: #c5c2c2">Join →</button></div>
+</section>
+
+<div id="quickModal" class="quick-modal">
+<div class="quick-box">
+<span id="closeQuick">✕</span>
+<div id="quickImg">👕</div>
+<h3 id="quickName">Product Name</h3>
+<p id="quickPrice">Rs. 0</p>
+<div class="size-row"><p>Select Size:</p><div class="sizes"><button class="size active">S</button><button class="size">M</button><button class="size">L</button><button class="size">XL</button></div></div>
+<button id="quickAddBtn" class="btn-checkout">Add to Bag →</button>
+</div>
+</div>
+
+<div id="cartModal" class="cart-modal"><div class="cart-content"><div class="cart-head"><h3>Shopping Bag</h3><span id="closeCart">✕</span></div><div id="cartItems">Bag is empty</div><div class="cart-total">Total: Rs. <span id="totalPrice">0</span></div><button id="checkoutBtn" class="btn-checkout">Checkout on WhatsApp →</button><p class="cart-note">✓ Cash on Delivery • 7 Day Returns</p></div></div>
+
+<footer>
+<div class="foot-grid">
+<div><h4>NOVA.</h4><p>Minimalist fashion for modern life.<br>Designed in Pakistan.</p></div>
+<div><b>Shop</b><a>Women</a><a>Men</a><a>Accessories</a><a>New In</a></div>
+<div><b>Help</b><a>Shipping</a><a>Returns</a><a>Size Guide</a><a>Contact</a></div>
+<div><b>Social</b><a>Instagram</a><a>TikTok</a><a>WhatsApp: 0300-0000000</a></div>
+</div>
+<div class="foot-bottom">© 2026 NOVA FASHION | Made for Portfolio by NEXA Agency • Lahore, Pakistan</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
